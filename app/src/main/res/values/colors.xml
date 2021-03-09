@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!--Application Specific-->
+    <color name="k_bg">#F2F2F2</color>
+    <color name="k_common_text_pressed">#333333</color>
+    <color name="k_common_text_normal">#75be6d</color>
+    <color name="text_green">#FF2ba0ef</color>
+    <color name="text_dark">#FF333333</color>
+    <color name="text_gray">#FF999999</color>
+    <color name="text_offline">#FF595959</color>
+    <color name="text_light_gray">#666666</color>
+    <color name="background_gray">#FFe5e5e5</color>
+    <color name="background_light">#FFF5F5F5</color>
+    <color name="text_offline_alarm">#FFd43838</color>
+    <color name="text_sound_alarm">#FFefac2b</color>
+
+    <color name="text_white">#ffffff</color>
+    <color name="text_hint">#FFB9B9B9</color>
+
+    <color name="alert_layer1">#66FF2626</color>
+    <color name="alert_layer2">#6629C0FF</color>
+    <color name="alert_layer3">#66FFB400</color>
+
+    <color name="hint_text_color">#999999</color>
+
+    <color name="transclucent">#80000000</color>
+    <!-- <drawable name="kc_common_click_btn"></drawable> -->
+
+    <color name="green">#a8d878</color>
+    <color name="red">#ffFF2626</color>
+    <color name="guide_green">#FF88CF36</color>
+    <drawable name="green">#a8d878</drawable>
+    <drawable name="dark">#FF333333</drawable>
+    <drawable name="welcome_while_default">#FFFFFF</drawable>
+    <drawable name="welcome_while_pressed">#F5F5F5</drawable>
+
+    <color name = "pattern_green">#8cd03d</color>
+    <color name = "pattern_gray">#666666</color>
+    <color name = "pattern_yellow">#ffe829</color>
+    <color name = "pattern_bg">#669B25</color>
+
+    <color name = "switch_gray">#FFe4e4e4</color>
+    <color name = "switch_white">#ffFFFF</color>
+
+    <color name = "left_drawer_text_green">#5bd83e</color>
+    <color name = "left_drawer_focus_green">#74d6da</color>
+    <color name = "left_drawer_while">#f0f0f0</color>
+
+    <color name="transparent">#9000</color>
+    <color name="color_white">#ffffffff</color>
+    <color name="color_black">#ff000000</color>
+
+    <color name="text_title">#FF904010</color>
+    <color name="text_list_item">#FFFFFFFF</color>
+
+    <drawable name="led_red">#66FF2626</drawable>
+    <color name="color_yellow">#ffffcf00</color>
+    <color name="color_green">#ff20ff20</color>
+
+    <color name="title_color">#2D767F</color>
+    <color name="bottom_tab_color">#B5F1F1</color>
+
+
+
+
+
+
+
+
+
+
+
+</resources>

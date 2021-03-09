@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/layout_preview"
+			android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff" >
+            
+            <ImageView
+                android:id="@+id/bkView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:contentDescription="@null"
+                android:scaleType="fitXY"/>   
+                            
+            <ImageView
+                android:id="@+id/live_video"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:contentDescription="@null"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:contentDescription="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/line" />
+         
+        	<TextView
+        	    android:id="@+id/ConnectionState"
+        	    android:layout_width="wrap_content"
+        	    android:layout_height="wrap_content"
+        	    android:layout_marginTop="80dp"
+        	    android:layout_centerHorizontal="true"
+        	    android:text="@string/device_state_connect"
+        	    android:textColor="@color/color_green"
+        	    android:textSize="30sp" />            
+		</RelativeLayout>
+		
+        <include
+            android:id="@+id/layout_live_func"
+            layout="@layout/item_video_options" />
+       
+        <include 
+        	android:id="@+id/live_fake_action_bar"
+        	layout="@layout/item_common_title" />
+		<Button
+			android:layout_width="35dp"
+			android:layout_height="35dp"
+			android:id="@+id/btn_show"
+			android:layout_marginRight="10dp"
+			android:layout_below="@id/live_fake_action_bar"
+			android:layout_alignParentRight="true"
+			android:background="@drawable/staff"/>
+		<Button
+			android:id="@+id/bt_circle"
+			android:layout_width="35dp"
+			android:layout_height="35dp"
+			android:layout_alignParentRight="true"
+			android:layout_below="@id/btn_show"
+			android:layout_marginRight="10dp"
+			android:background="@drawable/mirror1"
+			/>
+     </RelativeLayout>
+</RelativeLayout>

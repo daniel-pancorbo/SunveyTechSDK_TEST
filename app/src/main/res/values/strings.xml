@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Lynx Camera</string>
+    <string name="action_settings">Settings</string>
+
+    
+    <string name="title_password">Password  :</string>
+    <string name="title_ssid">WLAN :</string>
+     <string name="title_channel">Channel  :</string>
+        
+    
+    
+    <string name="spinner_prompt_ssid">Turn on Camera first!</string>
+    <string name="edit_hint_input_ssid">Scan Camera...</string>
+    <string name="edit_hint_input_pwd">.....</string>
+    
+	
+	<string name="btn_ssid_setup">WiFi Setup</string>
+	<string name="btn_channel_setup">Setup</string>
+	<string name="device_state_connecting">Connecting...</string>
+
+	<string name="device_state_connect">Connecting...</string>
+    
+    <string name="confirm">Confirm</string>
+    
+</resources>
