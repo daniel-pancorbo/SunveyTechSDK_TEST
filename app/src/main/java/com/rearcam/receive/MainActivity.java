@@ -13,7 +13,6 @@ import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
 import android.net.wifi.WifiManager;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -22,9 +21,9 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
 import android.os.PowerManager;
-import android.provider.Settings;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
+
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -39,8 +38,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.rearcam.receive.RearCamDeviceSetupActivity;
-import com.rearcam.receive.ShowPicActivity;
+import com.rearcam.aicontrol.ai.FrameProcessor;
 import com.rearcam.receive.constant.SpConstant;
 import com.rearcam.receive.utils.BitmapUtil;
 import com.rearcam.receive.utils.FileUtil;
@@ -117,6 +115,10 @@ public class MainActivity extends Activity {
     private SpUtil spUtil;
     private boolean mbIsExit = false;
     private WifiManager mWifiManager;
+
+    //LYNX DEFINES
+    FrameProcessor frameProcessor;
+    private ImageView frameView;
 
 
     @Override
@@ -223,6 +225,15 @@ public class MainActivity extends Activity {
 //		if (Build.VERSION.SDK_INT >= 23 && !AppUtil.isGpsOPen(this)) {
 //				Settings.Secure.putInt(getContentResolver(),Settings.Secure.LOCATION_MODE, 1);
 //		}
+
+
+        //LYNX SECTION
+        //TODO Check Integration
+        frameView = findViewById(R.id.cameraFrameView);
+        frameProcessor = new FrameProcessor();
+
+
+
     }
 
     /**
@@ -584,6 +595,7 @@ public class MainActivity extends Activity {
 
     public void show(byte[] showbuffer) {
         bm = BitmapFactory.decodeByteArray(showbuffer, 0, showbuffer.length, options);
+
         if(bm != null)
             if (!isReverse){
                 jpgView.setImageBitmap(bm);
@@ -591,6 +603,10 @@ public class MainActivity extends Activity {
                 jpgView.setImageBitmap(BitmapUtil.reverseBitmap(bm,0));
             }
 
+        //TODO REVIEW AI COLLITION AVOIDANCE
+
+        frameProcessor.detect(bm, this);
+        frameView.setImageBitmap(bm);
     }
 
 
@@ -695,6 +711,7 @@ public class MainActivity extends Activity {
                         }
                         else{
                             show(tmpBuffer);
+
                             ConnectText.setText("");
                             //第一次的时候不复制数组，之后复制
                             if(!isFirstPic && tempImgBusffer == null){
